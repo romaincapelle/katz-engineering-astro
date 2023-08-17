@@ -15,9 +15,241 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body>
+    <div class="header">
+      <a class="logo"
+        href="/"
+      >
+        <img
+            width="300px"
+            alt="Katz Engineering Logo"
+          src="/katz-engineering-logo-new-york.jpg"
+        />
+      </a>
+      <nav class="navigation">
+        <ul>
+            <li>
+                <a id="nav-home" href="/">Home</a>
+            </li>
+
+            <li>
+                <a id="nav-aboutkatzenginnering" href="/aboutkatzenginnering">About</a>
+            </li>
+
+            <li>
+                <a id="nav-special-inspections-new-york-city" href="/special-inspections-new-york-city">Special Inspections – NYC</a>
+            </li>
+
+            <li>
+                <a id="nav-asbestos-investigation-nyc" href="/asbestos-investigation-nyc">Asbestos Investigation – NYC</a>
+            </li>
+
+            <li>
+                <a id="nav-contact-2" href="/contact-2">Contact</a>
+            </li>
+
+        </ul>
+      </nav>
+
+    </div>
     <slot />
+
+    <footer>
+        <hr>
+        <div class="columns">
+            <div class="column">
+                <h5>About</h5>
+                <p>Katz Engineering is an engineering firm in New York City specializing in Special and Progress Inspections, NYC Energy Code Progress Inspections and Asbestos Investigation.</p>
+            </div>
+            <div class="column">
+                <h5>Call us</h5>
+
+                <p>Landline: (212) 244-7070<br>
+                    Cell: (201) 579-0193</p>
+
+
+            </div>
+            <div class="column">
+                <h5>Offices</h5>
+                <p>
+                    160 West 62 Street Suite 26E<br>New York, NY 10023
+                </p>
+            </div>
+            <div class="column">
+                <h5>Email</h5>
+                 <!-- ykatz@katzengineering.com -->
+                <p><a href="mailto:ykatz@katzengineering.com">ykatz@katzengineering.com</a></p>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
+
+<style lang="scss">
+
+    :is(a, button, input, textarea, summary) {
+        --outline-size: max(2px, 0.08em);
+        --outline-style: solid;
+        --outline-color: currentColor;
+    }
+
+    :is(a, button, input, textarea, summary):focus {
+        outline: var(--outline-size) var(--outline-style) var(--outline-color);
+        outline-offset: var(--outline-offset, var(--outline-size));
+        border-radius: 2px;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        padding-inline: 28px;
+        padding-block: 58px;
+        border-bottom: 1px solid #E5E5E5;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        // tablet
+        @media (max-width: 1024px) {
+            display: block;
+        }
+
+        // mobile
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // tablet
+            @media (max-width: 1024px) {
+                justify-content: center;
+
+                img {
+                    width: 300px;
+                    display: flex;
+                    /* align-items: center; */
+                    margin: 0 auto;
+                    padding-left: 73px;
+                }
+            }
+
+            // mobile
+            @media (max-width: 768px) {
+                img {
+                    width: 280px;
+                    display: flex;
+                    /* align-items: center; */
+                    margin: 0 auto;
+                    padding-left: 60px;
+                }
+            }
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            // tablet
+            @media (max-width: 1024px) {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                gap: 18px;
+
+                // mobile
+                @media (max-width: 1024px) {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 18px;
+                }
+
+                li {
+                    margin-left: 18px;
+
+                    a {
+                        color: black;
+                        font-size: 14px;
+                        text-underline-offset: 8px;
+                        // underline red thick
+                        text-decoration: none;
+                        font-weight: 700;
+                    }
+
+                    a:hover,  {
+                        text-decoration: underline 3px solid black;
+                    }
+
+                    a.active {
+                        text-decoration: underline 3px solid #6F070B;
+                    }
+                }
+            }
+
+        }
+    }
+
+    footer {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-block: 58px;
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 28px;
+            padding-block: 58px;
+            align-items: baseline;
+
+            // mobile
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 18px;
+            }
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            gap: 18px;
+            width: 100%;
+            max-width: 200px;
+
+            h5 {
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: underline;
+            }
+        }
+    }
+</style>
 
 <style>
   :root {
@@ -30,10 +262,11 @@ const { title } = Astro.props as Props;
   }
 
   html {
-    font-family: system-ui, sans-serif;
+    font-family: arial, system-ui, sans-serif;
     font-size: var(--font-size-base);
     color: var(--color-text);
     background-color: var(--color-bg);
+    letter-spacing: 0.6px;
   }
 
   body {
@@ -49,7 +282,7 @@ const { title } = Astro.props as Props;
   }
 
   :global(code) {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+    font-family: Arial, Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
 </style>

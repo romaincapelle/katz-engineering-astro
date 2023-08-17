@@ -18,6 +18,9 @@
     "prettier-plugin-astro": "^0.11.0"
   },
   "dependencies": {
-    "cypress": "^10.0.3"
+    "@fontsource/fira-mono": "^5.0.8",
+    "@fontsource/noto-sans-tc": "^5.0.7",
+    "cypress": "^10.0.3",
+    "sass": "^1.65.1"
   }
 }
