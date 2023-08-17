@@ -1,0 +1,59 @@
+---
+import '@fontsource/noto-sans-tc';
+import Layout from '../components/Layout.astro';
+import FeedbackForm from '../components/FeedbackForm.astro';
+---
+
+<Layout title="Katz Engineering | Katz Engineering is an engineering firm in New York City specializing in Special and Progress Inspections, NYC Energy Code Progress Inspections and Asbestos Investigation.">
+  <main>
+    <h1>Contact</h1>
+
+  </main>
+</Layout>
+
+<style lang="scss">
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 2rem 0 1rem;
+    }
+
+    blockquote {
+        padding-block: 2rem;
+        line-height: 160%;
+    }
+
+    .image-with-text {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+
+        // tablet
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+
+        .image-with-text__image {
+            width: 100%;
+            height: auto;
+            @media (max-width: 1024px) {
+                margin: 10px auto 40px;
+                max-width: fit-content;
+            }
+        }
+
+        .image-with-text__text {
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 1rem;
+        }
+    }
+}
+</style>
