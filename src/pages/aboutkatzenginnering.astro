@@ -6,68 +6,65 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 
 <Layout title="Katz Engineering | Katz Engineering is an engineering firm in New York City specializing in Special and Progress Inspections, NYC Energy Code Progress Inspections and Asbestos Investigation.">
   <main>
+    <h1>About Katz Engineering</h1>
+    <h2>Who We Are</h2>
+    <div class="image-with-text">
+        <img class="image-with-text__image" src="/yuri-katz-engineering.jpg">
+        <p class="image-with-text__text">Established in 1993, Katz Engineering (formerly Katz Associates) is a privately owned, full-service special inspections firm. We are headquartered in New York City and are licensed in New York and New Jersey.<br>
+Katz Engineering was formed in order to meet the growing need for superior engineering services in the face of today’s fast-paced and complex building industry. On June 30, 2007, Mayor Bloomberg signed a new provision into law: New Section §101-06 of Title 1 of the Rules of the City of New York. This stipulates that professionals with the prescribed qualifications must perform the required inspections and tests, including mechanical, sprinkler, firestop, fire-resistant related construction, envelope-related construction, sprayed fire resistant materials, fuel oil piping, and energy code (TRB) special inspections. At Katz Engineering, we possess the necessary qualifications to perform such services and have 25-plus years of experience that ensures exceptional results.<br>
+Our experienced professionals – all recognized experts in their areas of specialty – are capable of handling projects of a wide variety of scope and size. The company principal, supporting staff, and computer capabilities ensure that assignments are executed in an efficient, timely, and professional manner.<br>
+Katz Engineering gives careful attention to detail and completeness for each contract document. The company’s principal leads each assignment to guarantee project quality and client satisfaction. Our project team works closely with clients to meet budgets, completion dates, and quality standards.</p>
 
-    <div class="intro">
-      <p>
-        Katz
-        <a href="https://astro.build/">Astro</a> app with the scaffolding for
-        <a href="https://ntl.fyi/3upc4Qo"
-          >Netlify Functions</a
-        >, <a href="https://ntl.fyi/3bICRk6">Forms</a>, and
-      <a href="https://ntl.fyi/3PcY8RH">Redirects</a>. Our
-      aim was to give you the code you would need to hit the ground running
-      with a few fun features.
-    </p>
-
-    <p>
-      You can find the code for this project on GitHub at
-      <a href="https://github.com/netlify-templates/astro-toolbox"
-        >https://github.com/netlify-templates/astro-toolbox</a
-      >! Happy coding!
-    </p>
-    </div>
-    <FeedbackForm />
-    <a class="jokes-link" href="/api/joke">
-    <h3>
-      Click here for function-loaded jokes!
-    </h3>
-    </a>
+</div>
+<blockquote>
+    <i>We are dedicated to bringing the highest standards of quality to each project. Our mission is to provide the vision, design strategy and expertise to produce effective, efficient and reliable design systems. We guarantee that all of our assignments will satisfy defined schedules and budgets.</i>
+</quote>
   </main>
 </Layout>
 
-<style>
-  :root {
-    text-align: center;
-  }
-  .logo img {
-    padding: 30px 0;
-    width: 100%;
-  }
-
-  main {
-    padding: 2rem 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+<style lang="scss">
+main {
+    max-width: 1440px;
     margin: 0 auto;
-    max-width: 60ch;
-    align-items: center;
-  }
+    padding: 0 1rem;
+    text-align: center;
 
-  footer {
-    width: 100%;
-    height: 100px;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 2rem 0 1rem;
+    }
 
-  footer img {
-    width: 20px;
-  }
+    blockquote {
+        padding-block: 2rem;
+        line-height: 160%;
+    }
+
+    .image-with-text {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+
+        // tablet
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+
+        .image-with-text__image {
+            width: 100%;
+            height: auto;
+            @media (max-width: 1024px) {
+                margin: 10px auto 40px;
+                max-width: fit-content;
+            }
+        }
+
+        .image-with-text__text {
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 1rem;
+        }
+    }
+}
 </style>
-
-<script>
-    document.getElementById('nav-aboutkatzenginnering').classList.add('active');
-</script>
