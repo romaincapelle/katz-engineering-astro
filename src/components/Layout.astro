@@ -43,10 +43,6 @@ const { title } = Astro.props as Props;
                 <a id="nav-asbestos-investigation-nyc" href="/asbestos-investigation-nyc">Asbestos Investigation – NYC</a>
             </li>
 
-            <li>
-                <a id="nav-contact-2" href="/contact-2">Contact</a>
-            </li>
-
         </ul>
       </nav>
 
@@ -54,7 +50,7 @@ const { title } = Astro.props as Props;
     <slot />
 
     <footer>
-        <hr>
+        <hr class="footer-separator">
         <div class="columns">
             <div class="column">
                 <h5>About</h5>
@@ -64,7 +60,7 @@ const { title } = Astro.props as Props;
                 <h5>Call us</h5>
 
                 <p>Landline: (212) 244-7070<br>
-                    Cell: (201) 579-0193</p>
+                    Cell: (201) 221-9091</p>
 
 
             </div>
@@ -240,17 +236,13 @@ const { title } = Astro.props as Props;
             h5 {
                 padding: 0;
                 margin: 0;
-            }
-
-            h5 {
                 font-size: 14px;
                 font-weight: 700;
-                text-transform: uppercase;
                 letter-spacing: 1px;
             }
 
             p {
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 400;
             }
 
@@ -260,6 +252,12 @@ const { title } = Astro.props as Props;
                 text-decoration: underline;
             }
         }
+    }
+
+    hr.footer-separator {
+        border: 0;
+        height: 2px;
+        background-color: black;
     }
 </style>
 

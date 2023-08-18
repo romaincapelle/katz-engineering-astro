@@ -8,12 +8,15 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 <main>
     <div class="section-header">
         <div class="section-header__text">
-            <p><span class="section-header__text--small">Katz Engineering is a </span><br><span class="section-header__text--bold"><b>NYC Special Inspection Agency</b>.</span><br><span>NYC SIA #000238</span></p>
-            <ul>
-                <hr>
-                <li>NYC Asbestos Investigator</li>
-                <li>NYC #141886</li>
-            </ul>
+            <div>
+                <p><span class="section-header__text--small">Katz Engineering is a </span><br><span class="section-header__text--bold"><b>NYC Special Inspection Agency</b></span><br><span>NYC SIA #000238</span></p>
+                <ul>
+                    <hr>
+                    <li>NYC Asbestos Investigator</li>
+                    <li>NYC #141886</li>
+                </ul>
+            </div>
+            <a class="link" href="/aboutkatzenginnering">Learn More</a>
         </div>
         <img src="/slide-katzengineering.jpeg" alt="Katz Engineering Logo" />
     </div>
@@ -47,16 +50,21 @@ import FeedbackForm from '../components/FeedbackForm.astro';
             flex-direction: column;
             text-align: left;
             padding: 0 28px;
+            justify-content: space-between;
         }
 
         .section-header__text--small {
-            font-size: 0.8rem;
+            font-size: 12px;
             line-height: 38px;
         }
 
         .section-header__text--bold {
             font-weight: 800;
             line-height: 38px;
+        }
+
+        p {
+            font-size: 14px;
         }
 
         hr {
@@ -74,9 +82,33 @@ import FeedbackForm from '../components/FeedbackForm.astro';
             padding: 0;
         }
         li {
-
             list-style: none;
             text-align: left;
+            color: #333333;
+            font-size: 16px;
+            line-height: 26px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0px;
+            text-transform: capitalize;
+        }
+
+        a.link {
+            color: #6f070b;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:focus-visible {
+                outline: 2px solid #6f070b;
+                text-decoration: underline;
+                width: fit-content;
+            }
         }
     }
 

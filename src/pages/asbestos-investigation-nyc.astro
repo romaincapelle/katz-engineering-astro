@@ -9,9 +9,37 @@ import FeedbackForm from '../components/FeedbackForm.astro';
     <h1>Asbestos Investigation – NYC</h1>
     <p>If you are looking into remodeling, repairing, renovating or demolishing a dwelling or building, an asbestos inspection must be done before to being eligible for a permit.
 
-</p>
-    <h2>Katz Engineering Is Certified For Asbestos Investigaton.</h2>
+    </p>
+        <h2>Katz Engineering Is Certified For Asbestos Investigaton.</h2>
 
+        <div class="question">
+            <h3>What Is Asbestos?</h3>
+            <p>Asbestos is a group of natural mineral fibers that are known for their strength and fire-resistant properties. Asbestos has been used in thermal insulation and fire proofing for the construction industry. Although asbestos fibers come in blue, brown, and green colors, most asbestos used in the United States is white asbestos, and is called Chrysotile.
+        </div>
+
+    </p>
+
+    <h2>Categories Of Asbestos-Containign Building Materials</h2>
+    <p>EPA identifies three categories of ACM used in building:</p>
+    <ul>
+        <li>
+            <h5>Surfacing Materials</h5>
+            <hr>
+            <p>ACM sprayed or TROWELED on surfaces (walls, ceilings, structural members) for acoustical, decorative, or fireproofing purposes. This includes plaster and fireproofing insulation.</p>
+        </li>
+        <li>
+            <h5>Thermal Systems Insulation</h5>
+            <hr>
+            <p>Insulation used to inhibit heat transfer or prevent condensation on pipes, boilers, tanks, ducts, and various other components of hot and cold water systems and heating., ventilation, and air conditioning (HVAC) systems. This includes pipe lagging; pipe wrap; block, batt, and blanket insulation; cement and “muds;” and a variety of products such as gaskets and ropes.</p>
+        </li>
+        <li>
+            <h5>Miscellaneous Materials</h5>
+            <hr>
+            <p>Other, largely non-friable products and materials such as floor tile, ceiling tile, roofing tile, concrete pipe, outdoor siding, and fabrics. While it is often possible to “suspect” that a material or product is or contains asbestos by visual determination, actual determinations can only be made by instrumental analysis. The E.P.A. requires that the asbestos content of suspect materials be determined by collecting bulk samples and analyzing percent and type of asbestos in the bulk material.</p>
+        </li>
+    </ul>
+    <hr>
+    <p>However, some of these materials do not have to be inspected and inventoried under Asbestos Hazard Emergency Response Act (AHERA) Rule. Under AHERA, asbestos- containing building materials (ACBM) in schools (Kindergarten through grade through 12) do not include materials installed outside of a building (e.g., roofing felt and siding). Likewise, under the Asbestos School Hazard Abatement Reauthorization Act (ASHARA), which applies to public and commercial buildings, the inspection of exterior ACBM is not required.</p>
   </main>
 </Layout>
 
@@ -23,15 +51,60 @@ main {
     text-align: center;
 
     h1 {
-        font-size: 2rem;
+        font-size: 47px;
         font-weight: 700;
         margin: 0;
         padding: 2rem 0 1rem;
     }
 
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 160%;
+        margin: 0;
+        padding: 0 0 2rem;
+    }
+
     blockquote {
         padding-block: 2rem;
         line-height: 160%;
+    }
+
+    .question {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 22px;
+        align-items: center;
+        min-height: 160px;
+        max-width: 860px;
+        padding-inline: 80px;
+        margin-inline: auto;
+
+        // tablet
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            padding-inline: 0;
+            margin-inline: 0;
+            margin-top: 80px;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     .image-with-text {
@@ -58,6 +131,29 @@ main {
             margin: 0;
             padding: 0 1rem;
         }
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 22px;
+        align-items: center;
+        min-height: 160px;
+        //no bullet
+        list-style: none;
+    }
+
+    li {
+        font-size: 12px;
+        line-height: 160%;
+        margin: 0;
+        padding: 0 0 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 </style>
