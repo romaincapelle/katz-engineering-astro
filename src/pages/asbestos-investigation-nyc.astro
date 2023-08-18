@@ -20,21 +20,18 @@ import FeedbackForm from '../components/FeedbackForm.astro';
     </p>
 
     <h2>Categories Of Asbestos-Containign Building Materials</h2>
-    <p>EPA identifies three categories of ACM used in building:</p>
+    <p class="subtitle">EPA identifies three categories of ACM used in building:</p>
     <ul>
         <li>
             <h5>Surfacing Materials</h5>
-            <hr>
             <p>ACM sprayed or TROWELED on surfaces (walls, ceilings, structural members) for acoustical, decorative, or fireproofing purposes. This includes plaster and fireproofing insulation.</p>
         </li>
         <li>
             <h5>Thermal Systems Insulation</h5>
-            <hr>
             <p>Insulation used to inhibit heat transfer or prevent condensation on pipes, boilers, tanks, ducts, and various other components of hot and cold water systems and heating., ventilation, and air conditioning (HVAC) systems. This includes pipe lagging; pipe wrap; block, batt, and blanket insulation; cement and “muds;” and a variety of products such as gaskets and ropes.</p>
         </li>
         <li>
             <h5>Miscellaneous Materials</h5>
-            <hr>
             <p>Other, largely non-friable products and materials such as floor tile, ceiling tile, roofing tile, concrete pipe, outdoor siding, and fabrics. While it is often possible to “suspect” that a material or product is or contains asbestos by visual determination, actual determinations can only be made by instrumental analysis. The E.P.A. requires that the asbestos content of suspect materials be determined by collecting bulk samples and analyzing percent and type of asbestos in the bulk material.</p>
         </li>
     </ul>
@@ -45,10 +42,15 @@ import FeedbackForm from '../components/FeedbackForm.astro';
 
 <style lang="scss">
 main {
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
     text-align: center;
+
+    .subtitle {
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+    }
 
     h1 {
         font-size: 47px;
@@ -137,7 +139,7 @@ main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 22px;
-        align-items: center;
+        align-items: baseline;
         min-height: 160px;
         //no bullet
         list-style: none;
@@ -153,7 +155,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
 }
 </style>
