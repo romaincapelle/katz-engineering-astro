@@ -20,6 +20,26 @@ Katz Engineering gives careful attention to detail and completeness for each con
     <i>We are dedicated to bringing the highest standards of quality to each project. Our mission is to provide the vision, design strategy and expertise to produce effective, efficient and reliable design systems. We guarantee that all of our assignments will satisfy defined schedules and budgets.</i>
 </quote>
 
+<div class="four-columns">
+    <div class="four-columns__column"><h3>Education</h3>
+    <li>M.S.C.E., Institute of Civil Engineering, Kiev, Ukraine</li>
+    </div>
+    <div class="four-columns__column"><h3>Professional Affiliations</h3>
+    <li>American Society of Sanitary Engineering (Past Chapter President)</li>
+    <li>American Society of Plumbing Engineers</li>
+    <li>National Society of Professional Engineers</li>
+    <li>National Fire Protection Association</li>
+    <li>Society of Fire Protection Engineers</li>
+    <li>ASHRAE</li>
+    </div>
+    <div class="four-columns__column"><h3>Related Activites</h3>
+    <li>Lecturer, New York University School of Continuing Education, A.R.E. preparation course.</li>
+    </div>
+    <div class="four-columns__column"><h3>Registration</h3>
+    <li>New York and New Jersey.</li>
+    </div>
+</div>
+
 <br><br>
     <h2>What We Do</h2>
     <p>Katz Engineering is devoted to servicing the special inspections industry. As an engineering design firm, our professionals possess specialized skills to evaluate existing systems as well as new construction, modification and renovation projects. Our services include, but are not limited to, mechanical, sprinkler, firestop, fire-resistant and envelope-related construction, sprayed fire resistant materials, fuel oil piping, fire alarm, emergency lighting, and energy code (TR8) inspections.<br><br>
@@ -74,6 +94,29 @@ main {
             margin: 0;
             padding: 0 1rem;
         }
+    }
+}
+
+.four-columns {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+
+    // tablet
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // mobile
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
+
+    li {
+        font-size: 12px;
+        letter-spacing: 0;
+        text-align: left;
     }
 }
 </style>
