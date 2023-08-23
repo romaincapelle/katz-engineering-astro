@@ -10,40 +10,46 @@ import FeedbackForm from '../components/FeedbackForm.astro';
     <p>Mayor Bloomberg signed into effect Section §101-06 of Title 1 of the Rules of the City of New York “Special Inspectors and special inspection agencies” on June 30, 2008. The Rule stipulates that only professionals with the prescribed qualifications can perform the required inspections and tests. The list of qualifications can be found in Appendix A to the Rule.</p>
     <h2>Katz Engineering Inspection Services Include:</h2>
 
-<div class="special-inspection__title">Sprinkler Systems - </span>
-<span class="special-inspection__id">BC 1704.23</div>
-<div class="special-inspection__title">Standpipe Systems - </span>
-<span class="special-inspection__id">BC 1704.24</div>
-<div class="special-inspection__title">Fire-Resistant Penetrations And Joints - </span>
-<span class="special-inspection__id">BC 1704.27</div>
-<div class="special-inspection__title">Mechanical Systems - </span>
-<span class="special-inspection__id">BC 1704.16</div>
-<div class="special-inspection__title">Smoke Control Systems - </span>
-<span class="special-inspection__id">BC 1704.15</div>
-<div class="special-inspection__title">Photoluminescent Exit Path Markings - </span>
-<span class="special-inspection__id">1 RCNY 1026-01</div>
-<div class="special-inspection__title">Fuel-Oil Storage And Fuel-Oil Piping Systems - </span>
-<span class="special-inspection__id">BC 1704.17</div>
-<div class="special-inspection__title">Fire Alarm Test</div>
-<div class="special-inspection__title">Heating Systediv - </span>
-<span class="special-inspection__id">BC 1704.25</div>
-<div class="special-inspection__title">Mastic And Intumescent Fire-Resistant Coatings - </span>
-<span class="special-inspection__id">BC 1704.12</div>
-<div class="special-inspection__title">Emergency And Standby Power Systems (Generators) - </span>
-<span class="special-inspection__id">BC 1704.31</div>
-<div class="special-inspection__title">Small Building Inspections</div>
-<div class="special-inspection__title">Mastic And Intumescent Fdiv-Resistant Coatings - </span>
-<span class="special-inspection__id">BC 1704.12</div>
-<div class="special-inspection__title">Private On-Site Storm Water Drainage Disposal Systems And Detention Facilities Installation - </span>
-<span class="special-inspection__id">BC 1704.21.2</div>
-<div class="special-inspection__title">Individual On-Site Private Sewage Disposal Systems Installation - </span>
-<span class="special-inspection__id">BC 1704.22</div>
-<div class="special-inspection__title">Fire-Resistant Rated Construction - </span>
-<span class="special-inspection__id">BC 110.3.4</div>
-<div class="special-inspection__title">Public Assembly Emergency Lighting - </span>
-<span class="special-inspection__id">28-116.2.2</div>
-<div class="special-inspection__title">Final Inspections Directive 14 Of 1975, 28-116.2.4.2 - </span>
-<span class="special-inspection__id">BC 110.5</div>
+    <div class="special-inspection__grid">
+        <div class="special-inspection__title">LUMINOUS EGRESS PATH MARKINGS</div>
+        <div class="special-inspection__id">BC 1704.30(2014), BC 10248(2014),<br>BC 1705.35(2022), BC 1 025.8(2022)</div>
+
+        <div class="special-inspection__title">SPRAYED FIRE-RESISTANT MATERIALS</div>
+        <div class="special-inspection__id">BC 1704.11 (2014), BC 1705.14 (2022)</div>
+
+        <div class="special-inspection__title">MECHANICAL SYSTEMS</div>
+        <div class="special-inspection__id">BC 1704.16 (2014), BC 1705.21 (2022)</div>
+
+        <div class="special-inspection__title">FUEL-OIL STORAGE AND FUEL-OIL PIPING SYSTEMS</div>
+        <div class="special-inspection__id">BC 1704.17 (2014),BC 1705.22 (2022)</div>
+
+        <div class="special-inspection__title">PVT ON-SITE STORM WATER DISPOSAL SYSTEMS & DETENTION</div>
+        <div class="special-inspection__id">BC 1704.21.2 (2014), BC 1705.27.2 (2022)</div>
+
+        <div class="special-inspection__title">ON-SITE PRIVATE SEWAGE DISPOSAL SYSTEMS INSTALLATION</div>
+        <div class="special-inspection__id">BC 1704.22 (2014),BC 1705.28 (2022)</div>
+
+        <div class="special-inspection__title">SPRINKLER SYSTEMS</div>
+        <div class="special-inspection__id">BC 1704.23 (2014),BC 1705.29 (2022)</div>
+
+        <div class="special-inspection__title">STANDPIPE SYSTEMS</div>
+        <div class="special-inspection__id">BC 1704.24 (2014),BC 1705.30 (2022)</div>
+
+        <div class="special-inspection__title">HEATING SYSTEMS</div>
+        <div class="special-inspection__id">BC 1704.25 (2014), BC 1705.31 (2022)</div>
+
+        <div class="special-inspection__title">FIRE-RESISTANT PENETRATIONS AND JOINTS (FIRESTOP)</div>
+        <div class="special-inspection__id">BC 1704.27 (2014), BC 1705.17 (2022)</div>
+
+        <div class="special-inspection__title">MASTIC AND INTUMESCENT FIRE-RESISTANT COATINGS</div>
+        <div class="special-inspection__id">BC 1704.12 (2014), BC 1705.15 (2022)</div>
+
+        <div class="special-inspection__title">POST-INSTALLED ANCHORS</div>
+        <div class="special-inspection__id">BC 1704.32 (2014), BC 1705.37 (2022)</div>
+
+        <div class="special-inspection__title">TENANT PROTECTION PLAN COMPLIANCE</div>
+        <div class="special-inspection__id">BC 1705.26 (2022)</div>
+    </div>
   </main>
 </Layout>
 
@@ -72,15 +78,43 @@ main {
         max-width: 800px;
     }
 
+    .special-inspection__grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-top: 28px;
+
+        // mobile
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
     .special-inspection__title {
         font-weight: 800;
         margin-bottom: 18px;
+        display: flex;
+        text-align: left;
+        padding: 18px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid #242424;
+        margin-bottom: 28px;
     }
 
     .special-inspection__id {
         margin-bottom: 8px;
         font-weight: 400;
         color: #242424;
+        padding: 18px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid #f2f2f2;
+        margin-bottom: 28px;
+        text-align: left;
+        font-size: 14px;
+
+        // mobile
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }
 </style>
